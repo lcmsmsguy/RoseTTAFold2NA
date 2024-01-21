@@ -22,7 +22,7 @@ MEM="24" # max memory (in GB)
 WDIR=`realpath -s $1`  # working folder
 mkdir -p $WDIR/log
 
-conda activate RF2NA2
+#conda activate RF2NA2
 
 # process protein (MSA + homology search)
 function proteinMSA {
