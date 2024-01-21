@@ -14,15 +14,15 @@ unset __conda_setup
 
 SCRIPT=`realpath -s $0`
 export PIPEDIR=`dirname $SCRIPT`
-HHDB="$PIPEDIR/pdb100_2021Mar03/pdb100_2021Mar03"
+HHDB="$PIPEDIR/DB/pdb100_2021Mar03/pdb100_2021Mar03"
 
-CPU="8"  # number of CPUs to use
-MEM="64" # max memory (in GB)
+CPU="7"  # number of CPUs to use
+MEM="24" # max memory (in GB)
 
 WDIR=`realpath -s $1`  # working folder
 mkdir -p $WDIR/log
 
-conda activate RF2NA
+conda activate RF2NA2
 
 # process protein (MSA + homology search)
 function proteinMSA {

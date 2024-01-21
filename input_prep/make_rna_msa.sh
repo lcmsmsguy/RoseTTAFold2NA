@@ -6,10 +6,10 @@ out_dir="$2"
 out_tag="$3"
 
 overwrite=true
-if [ -f $out_dir/$out_tag.afa -a $overwrite = false]
-then
-    exit 0
-fi
+#if [[-f $out_dir/$out_tag.afa -a $overwrite = false]]
+#then
+#    exit 0
+#fi
 
 # resources
 CPU="$4"
@@ -44,7 +44,7 @@ function retrieveSeq {
 
     head -n $max_aln_seqs $tabfile | awk '{if ($2<$3) print $1,(($2-6>1)?($2-6):1)"-"($3+6),"plus"; else print $1,(($3-6>1)?($3-6):1)"-"($2+6),"minus"}' > $tag.list
     split -l $max_split_seqs $tag.list $tag.list.split.
-
+    
     for file in $tag.list.split.*
     do
         suffix=`echo $file | sed 's/.*\.list\.split\.//g'`

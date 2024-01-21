@@ -4,4 +4,4 @@ uniref /media/researcher/DATA/alphafold/DB/uniref30
 pdb100 /mnt/md0/rosettafold2NA/DB/pdb100_2021Mar03
 
 
-docker run --gpus all -it --mount type=bind,source=/media/researcher/DATA/deepfoldrna/DeepFoldRNA/bin/rMSA/database,target=/RoseTTAFold2NA/DB/RNA,readonly --mount type=bind,source=/mnt/md0/alphafold/DB/bfd,target=/RoseTTAFold2NA/DB/bfd,readonly --mount type=bind,source=/media/researcher/DATA/alphafold/DB/uniref30,target=/RoseTTAFold2NA/DB/UniRef30_2020_06,readonly --mount type=bind,source=/mnt/md0/rosettafold2NA/DB/pdb100_2021Mar03,target=/RoseTTAFold2NA/DB/pdb100_2021Mar03,readonly rosettafold2na3
+docker run --gpus all -it --mount type=bind,source=/mnt/md0/deepfoldrna/DeepFoldRNA/bin/rMSA/database,target=/RoseTTAFold2NA/DB/RNA,readonly --mount type=bind,source=/media/researcher/DATA/alphafold/DB/bfd,target=/RoseTTAFold2NA/DB/bfd,readonly --mount type=bind,source=/mnt/md0/alphafold/DB/uniref30,target=/RoseTTAFold2NA/DB/UniRef30_2020_06,readonly --mount type=bind,source=/mnt/md0/rosettafold2NA/DB/pdb100_2021Mar03,target=/RoseTTAFold2NA/DB/pdb100_2021Mar03,readonly rf2na
